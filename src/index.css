@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand:      #C8264A;
+  --color-brand-dark: #a31e3c;
+}
+
+/* ─── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  color: #111;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+img, video { max-width: 100%; display: block; }
+
+/* ─── Container ──────────────────────────────────────────── */
+.wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px)  { .wrap { padding-inline: 2.25rem; } }
+@media (min-width: 1024px) { .wrap { padding-inline: 3.5rem;  } }
+
+/* ─── Tipografia fluida ──────────────────────────────────── */
+/* Hero: impacto forte, mas não esmagador */
+.title-hero {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.2rem, 6.5vw, 5.25rem);
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* Títulos de seção: legíveis e com autoridade */
+.title-section {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* Títulos dos cards */
+.title-card {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* Eyebrow: rótulo de seção */
+.eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+
+/* Label: subtítulos e nav */
+.label {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+}
+
+/* Body text padrão */
+.body-text {
+  font-size: clamp(0.94rem, 1.8vw, 1.05rem);
+  line-height: 1.85;
+  color: #6b7280; /* gray-500 */
+}
+
+/* ─── Botões ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 1.05rem 2.75rem;
+  cursor: pointer;
+  transition: background-color 0.22s ease, color 0.22s ease,
+              border-color 0.22s ease, transform 0.18s ease,
+              box-shadow 0.22s ease;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+.btn:hover  { transform: translateY(-1px); }
+.btn:active { transform: translateY(0);    }
+
+.btn-primary            { background: #C8264A; color: #fff; border-color: #C8264A; }
+.btn-primary:hover      { background: #a31e3c; border-color: #a31e3c; box-shadow: 0 6px 20px rgba(200,38,74,0.35); }
+
+.btn-outline-brand      { background: transparent; color: #C8264A; border-color: #C8264A; }
+.btn-outline-brand:hover{ background: #C8264A; color: #fff; box-shadow: 0 6px 20px rgba(200,38,74,0.28); }
+
+.btn-outline-white      { background: transparent; color: #fff; border-color: rgba(255,255,255,0.65); }
+.btn-outline-white:hover{ background: #fff; color: #111; border-color: #fff; }
+
+.btn-wpp                { background: #25D366; color: #fff; border-color: #25D366; }
+.btn-wpp:hover          { background: #1fba59; border-color: #1fba59; box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+
+/* ─── Espaçamento vertical de seções ────────────────────── */
+.section-py {
+  padding-top:    clamp(4.5rem, 10vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 10vw, 7.5rem);
+}
+
+.section-py-xl {
+  padding-top:    clamp(6.5rem, 16vw, 13rem);
+  padding-bottom: clamp(6.5rem, 16vw, 13rem);
+}
+
+/* Cabeçalho de seção (eyebrow + título + subtítulo) */
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+.section-header .eyebrow { margin-bottom: 1.25rem; }
+.section-header .title-section { margin-bottom: 1.25rem; }
+
+/* ─── Marquee ────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+/* ─── Divisor decorativo ─────────────────────────────────── */
+.divider-brand {
+  width: 2.5rem;
+  height: 2px;
+  background: #C8264A;
+  margin-bottom: 1.25rem;
+}
