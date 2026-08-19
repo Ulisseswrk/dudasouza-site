@@ -1,23 +1,23 @@
 import { useReveal } from '../hooks/useReveal'
 
-const WPP = 'https://wa.me/5511999999999'
+const WPP = 'https://wa.me/5511993165681'
 
 const deps = [
   {
     nome: 'Marina C. (Evento Corporativo)',
-    text: '"Duda foi incrível no nosso evento. Repertório impecável, pontualidade e uma energia contagiante. Todos adoraram!"',
+    text: '"Duda foi incrível no nosso evento. Repertório e pontualidade impecáveis, fora a energia contagiante. Todo mundo cantou!"',
     align: 'left',
     maxWidth: '640px',
   },
   {
     nome: 'Ricardo M. (Festa de Aniversário)',
-    text: '"Contratei para o aniversário de 30 anos da minha esposa e foi a melhor decisão. Leu o clima perfeitamente e fez todo mundo dançar."',
+    text: '"Contratei para o aniversário de 30 anos da minha esposa e foi a melhor decisão. No final, todo mundo estava dançando. Recomendo demais!"',
     align: 'right',
     maxWidth: '580px',
   },
   {
     nome: 'Fernanda T. (Formatura)',
-    text: '"(...) Promete tudo e entrega muito mais! Nossa formatura ficou inesquecível. Queria me formar de novo só para contratá-lo mais uma vez!"',
+    text: '"(...) Promete tudo e entrega mais ainda. Nossa foi demais. Queria me formar denovo só para contratá-lo mais uma vez!"',
     align: 'left',
     maxWidth: '760px',
   },

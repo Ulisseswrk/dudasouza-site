@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const WPP = 'https://wa.me/5511999999999'
+const WPP = 'https://wa.me/5511993165681'
 const IG = 'https://instagram.com/dudasouza'
 
 const linksLeft = [

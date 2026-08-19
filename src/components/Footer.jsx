@@ -1,6 +1,6 @@
 import { useReveal } from '../hooks/useReveal'
 
-const WPP = 'https://wa.me/5511999999999'
+const WPP = 'https://wa.me/5511993165681'
 
 function IgIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="22" height="22" aria-hidden><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -12,6 +12,7 @@ function WppIcon() {
 
 export default function Footer() {
   const ref = useReveal({ threshold: 0.1 })
+  const year = new Date().getFullYear()
 
   return (
     <footer className="bg-black text-white">
@@ -34,7 +35,7 @@ export default function Footer() {
 
           <div className="order-3 md:order-2">
             <p className="text-white/30 font-light tracking-wide text-center" style={{ fontSize: '0.8rem' }}>
-              © 2024 Duda Souza <span className="mx-2 text-white/10">|</span> Todos os direitos reservados
+              © {year} Duda Souza <span className="mx-2 text-white/10">|</span> Todos os direitos reservados
             </p>
           </div>
 

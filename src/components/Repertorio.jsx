@@ -100,7 +100,7 @@ export default function Repertorio() {
               transition: 'opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s',
             }}
           >
-            Repertório vasto e adaptável. O setlist é montado sob medida para cada evento.
+            Repertório vasto e adaptável. Nossa setlist é montada sob medida para cada evento.
           </p>
         </div>
 

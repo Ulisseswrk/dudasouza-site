@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useReveal } from '../hooks/useReveal'
 import ShinyText from './ShinyText'
 
-const WPP = 'https://wa.me/5511999999999'
+const WPP = 'https://wa.me/5511993165681'
 
 const formacoes = [
   {

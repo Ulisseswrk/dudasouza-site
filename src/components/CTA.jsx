@@ -1,6 +1,6 @@
 import { useReveal } from '../hooks/useReveal'
 
-const WPP = 'https://wa.me/5511999999999'
+const WPP = 'https://wa.me/5511993165681'
 
 function WppIcon() {
   return (

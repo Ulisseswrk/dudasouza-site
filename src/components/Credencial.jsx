@@ -1,6 +1,6 @@
 import { useReveal } from '../hooks/useReveal'
 
-const WPP = 'https://wa.me/5511999999999'
+const WPP = 'https://wa.me/5511993165681'
 
 export default function Credencial() {
   const bgRef      = useReveal({ threshold: 0.08 })
@@ -84,12 +84,12 @@ export default function Credencial() {
               maxWidth: '500px',
             }}
           >
-            Com repertório que vai de{' '}
+            Nosso repertório que vai de{' '}
             <strong style={{ color: '#fff', fontWeight: 600 }}>
               Marilia Menconça a Steve Wonder
             </strong>
-            , passando por MPB e Rock Nacional, Duda leva música de verdade
-            para o seu evento, adaptada perfeitamente ao momento e ao público.
+            , passando por MPB e Rock Nacional, muda qualquer ambiente.
+            Ta cansado de eventos sem energia? Então você está no lugar certo.
           </p>
 
           {/* Parágrafo 2 */}
@@ -104,12 +104,11 @@ export default function Credencial() {
           >
             Não entregamos qualquer show. Entregamos{' '}
             <strong style={{ color: '#fff', fontWeight: 600 }}>
-              presença de palco
+              presença de palco 
             </strong>
-            , repertório sob medida e uma energia que transforma qualquer
-            celebração em{' '}
+              {' '}e uma energia que transforma qualquer celebração{' '}
             <strong style={{ color: '#fff', fontWeight: 600 }}>
-              memória afetiva.
+               em uma verdadeira festa.
             </strong>
           </p>
         </div>

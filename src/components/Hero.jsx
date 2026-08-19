@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const WPP = 'https://wa.me/5511999999999'
+const WPP = 'https://wa.me/5511993165681'
 
 function WppIcon({ size = 18 }) {
   return (
@@ -108,7 +108,7 @@ export default function Hero() {
             display: 'block',
           }}
         >
-          Músico Profissional · São Paulo
+          Músico Profissional para o seu evento
         </span>
 
         {/* Headline */}
@@ -140,7 +140,7 @@ export default function Hero() {
             maxWidth: '440px',
           }}
         >
-          MPB, Reggae e Rock Nacional — repertório sob medida para
+          MPB, Rock Nacional e muito mais... Repertório sob medida para
           casamentos, formaturas, corporativos e bares.
         </p>
 
