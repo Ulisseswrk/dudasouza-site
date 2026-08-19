@@ -27,12 +27,30 @@ export default function Credencial() {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: "url('/img/pessoas-dancando.png')",
+          backgroundImage: "url('/img/pessoas-dancando.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.12,
           pointerEvents: 'none',
           willChange: 'transform',
+        }}
+      />
+
+      {/* Vinheta topo/base — funde a foto de fundo com as seções vizinhas */}
+      <div
+        style={{
+          position: 'absolute', top: 0, left: 0, right: 0,
+          height: '12%',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%)',
+          pointerEvents: 'none', zIndex: 1,
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0,
+          height: '8%',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 100%)',
+          pointerEvents: 'none', zIndex: 1,
         }}
       />
 
@@ -138,7 +156,7 @@ export default function Credencial() {
             onMouseLeave={e => e.currentTarget.style.transform = 'rotate(-6deg)'}
           >
             <img
-              src="/img/pessoas-dancando.png"
+              src="/img/pessoas-dancando.jpg"
               alt="Pessoas dançando"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
@@ -164,8 +182,8 @@ export default function Credencial() {
             onMouseLeave={e => e.currentTarget.style.transform = 'rotate(5deg)'}
           >
             <img
-              src="/img/pessoas-cantando.png"
-              alt="Pessoas cantando"
+              src="/img/foto-sobre.jpeg"
+              alt="Duda tocando para a plateia"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
             <div style={{

@@ -125,7 +125,7 @@ export default function Hero() {
           }}
         >
           MPB, Rock Nacional e muito mais... Repertório sob medida para
-          casamentos, formaturas, corporativos e bares.
+          casamentos, formaturas, eventos corporativos e bares.
         </p>
 
         {/* Prova social */}

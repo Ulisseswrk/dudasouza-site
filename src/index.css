@@ -115,6 +115,15 @@
   50%       { opacity: 0.5; transform: scale(1.15); }
 }
 
+/* ─── Botão CTA "respirando" ─────────────────────────────── */
+@keyframes btn-breathe {
+  0%, 100% { transform: scale(1);   }
+  50%      { transform: scale(1.05); }
+}
+.btn-breathe {
+  animation: btn-breathe 3s ease-in-out infinite;
+}
+
 /* ─── Reset ──────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

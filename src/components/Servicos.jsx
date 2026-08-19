@@ -8,11 +8,11 @@ const formacoes = [
   {
     id: '01',
     label: 'Solo Acústico',
-    sub: 'Para eventos íntimos e sofisticados.',
-    desc: 'Voz e violão na medida certa. Intimidade e versatilidade para eventos que pedem elegância, leveza e música de verdade.',
+    sub: 'Para eventos mais intimistas.',
+    desc: 'Voz e violão clássico. Trás bastante intimidade e versatilidade para eventos que pedem mais leveza e música de verdade.',
     tag: 'Ideal para coquetéis, happy hours e jantares.',
-    img: '/img/foto-bar.jpeg',
-    imgPosition: 'center 25%',
+    img: '/img/foto-solo.jpeg',
+    imgPosition: 'center 50%',
     destaque: false,
   },
   {
@@ -27,9 +27,19 @@ const formacoes = [
   },
   {
     id: '03',
+    label: 'Trio',
+    sub: 'Para eventos de médio porte.',
+    desc: 'Duda + percussão + baixo (ou teclado). Um som cheio de groove, mantendo o charme e o clima do formato acústico.',
+    tag: 'Ótimo para casamentos maiores e eventos corporativos.',
+    img: '/img/foto-trio.jpeg',
+    imgPosition: 'center 0%',
+    destaque: false,
+  },
+  {
+    id: '04',
     label: 'Banda Completa',
     sub: 'Para eventos de alto impacto.',
-    desc: 'Força total de palco. Para quem quer fazer barulho de verdade — grandes eventos, festivais e festas inesquecíveis.',
+    desc: 'Aqui levamos a força máxima. Para quem quer fazer barulho de verdade em grandes eventos, festivais e festas maiores. Aqui é o lugar.',
     tag: 'Perfeito para festivais, formaturas e shows abertos.',
     img: '/img/foto-banda.png',
     destaque: false,
@@ -48,13 +58,32 @@ export default function Servicos() {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: "url('/img/pessoas-cantando.png')",
+          backgroundImage: "url('/img/pessoas-dancando.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.06,
           pointerEvents: 'none',
         }}
       />
+
+      {/* Vinheta topo/base — funde a foto de fundo com as seções vizinhas */}
+      <div
+        style={{
+          position: 'absolute', top: 0, left: 0, right: 0,
+          height: '30%',
+          background: 'linear-gradient(to bottom, #000 0%, transparent 100%)',
+          pointerEvents: 'none', zIndex: 1,
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0,
+          height: '30%',
+          background: 'linear-gradient(to top, #000 0%, transparent 100%)',
+          pointerEvents: 'none', zIndex: 1,
+        }}
+      />
+
       <div className="wrap" style={{ position: 'relative', zIndex: 1 }}>
 
         {/* Cabeçalho alinhado à esquerda */}
@@ -77,7 +106,7 @@ export default function Servicos() {
         {/* Grid de cards */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 md:grid-cols-3 stagger"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 stagger"
           style={{ gap: '1.5rem' }}
         >
           {formacoes.map(f => (
@@ -89,7 +118,7 @@ export default function Servicos() {
   )
 }
 
-function Card({ label, sub, desc, tag, img, imgPosition = 'center', destaque }) {
+function Card({ label, sub, desc, tag, img, imgPosition = 'center', imgScale = 1, destaque }) {
   const [hovered, setHovered] = useState(false)
 
   return (
@@ -122,7 +151,7 @@ function Card({ label, sub, desc, tag, img, imgPosition = 'center', destaque }) 
             height: '100%',
             objectFit: 'cover',
             objectPosition: imgPosition,
-            transform: hovered ? 'scale(1.06)' : 'scale(1)',
+            transform: `scale(${hovered ? imgScale * 1.06 : imgScale})`,
             transition: 'transform 0.55s cubic-bezier(0.22,1,0.36,1)',
           }}
         />
@@ -244,7 +273,7 @@ function Card({ label, sub, desc, tag, img, imgPosition = 'center', destaque }) 
           marginTop: 'auto',
         }}
       >
-        Marque um horário
+        Garanta sua data
       </a>
     </div>
   )

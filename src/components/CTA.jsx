@@ -20,7 +20,7 @@ export default function CTA() {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: "url('/img/pessoas-cantando.png')",
+          backgroundImage: "url('/img/foto-fundo-cte.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.12,
@@ -64,7 +64,7 @@ export default function CTA() {
               href={WPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-wpp"
+              className="btn btn-wpp btn-breathe"
               style={{ paddingInline: '2.75rem', paddingBlock: '1.1rem' }}
             >
               <WppIcon /> Falar pelo WhatsApp

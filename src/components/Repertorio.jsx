@@ -6,22 +6,22 @@ const genres = [
     id: 'mpb',
     label: 'MPB',
     image: '/img/foto-ceu-aesthetic.jpeg',
-    artists: ['Chico Buarque', 'Caetano Veloso', 'Gilberto Gil', 'Milton Nascimento', 'Djavan', 'Marisa Monte'],
-    songs: ['Construção', 'Aquele Abraço', 'Preciso Me Encontrar', 'Anunciação'],
+    artists: ['Tim Maia', 'Marisa Monte', 'Rita Lee', 'Gilberto Gil', 'Jorge Ben Jor', 'Djavan', ],
+    songs: ['Descobridor dos Sete Mares', 'Mania de Você', 'Samurai', 'Anunciação'],
   },
   {
     id: 'reggae',
     label: 'Reggae',
     image: '/img/foto-tocando-beco.jpeg',
-    artists: ['Natiruts', 'Cidade Negra', 'Bob Marley', 'Edson Gomes'],
-    songs: ['Que Sorte a Nossa', 'A Saudade Mata a Gente', 'No Woman No Cry', 'Onde Você Mora?'],
+    artists: ['Natiruts', 'Maneva', 'Bob Marley', 'Skank','Rappa','Armandinho'],
+    songs: ['Could you be loved', 'Andei só', 'Vou Deixar', 'Me namora'],
   },
   {
     id: 'rock',
     label: 'Rock Nacional',
     image: '/img/foto-bar.jpeg',
     artists: ['Legião Urbana', 'Titãs', 'Raul Seixas', 'Charlie Brown Jr.', 'Capital Inicial', 'Os Paralamas'],
-    songs: ['Monte Castelo', 'Eduardo e Mônica', 'Tédio', 'Por Você'],
+    songs: ['Exagerado', 'Eduardo e Mônica', 'O que sobrou do céu', 'Por Você'],
   },
 ]
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const WPP = 'https://wa.me/5511993165681'
-const IG = 'https://instagram.com/dudasouza'
+const IG = 'https://instagram.com/dudasouza.voz'
 
 const linksLeft = [
   { label: 'Sobre', href: '#sobre' },
