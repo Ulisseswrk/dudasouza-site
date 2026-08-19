@@ -110,7 +110,7 @@ export default function Hero() {
           }}
         >
           Música ao vivo para um evento{' '}
-          <span style={{ color: '#E63946' }}>inesquecível</span>
+          <span style={{ color: '#ff5e00' }}>inesquecível</span>
         </h1>
 
         {/* Parágrafo */}
@@ -140,8 +140,8 @@ export default function Hero() {
             marginBottom: '2.75rem',
           }}
         >
-          <span style={{ color: '#E63946' }}>+200</span> eventos ·{' '}
-          <span style={{ color: '#E63946' }}>5 anos</span> de experiência
+          <span style={{ color: '#FF5E00' }}>+200</span> eventos ·{' '}
+          <span style={{ color: '#FF5E00' }}>5 anos</span> de experiência
         </p>
 
         {/* CTAs */}

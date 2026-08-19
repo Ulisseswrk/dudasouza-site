@@ -36,7 +36,7 @@ export default function Depoimentos() {
         <div style={{
           position: 'absolute',
           width: '80vw', height: '80vw',
-          background: '#C8264A',
+          background: '#FF5E00',
           filter: 'blur(100px)',
           opacity: 0.6,
           top: '-10%', left: '-20%',
@@ -46,7 +46,7 @@ export default function Depoimentos() {
         <div style={{
           position: 'absolute',
           width: '65vw', height: '65vw',
-          background: '#7a1530',
+          background: '#B33C00',
           filter: 'blur(90px)',
           opacity: 0.65,
           bottom: '-20%', right: '-15%',
@@ -56,7 +56,7 @@ export default function Depoimentos() {
         <div style={{
           position: 'absolute',
           width: '50vw', height: '50vw',
-          background: '#e8375a',
+          background: '#FF8A3D',
           filter: 'blur(80px)',
           opacity: 0.4,
           top: '20%', left: '35%',

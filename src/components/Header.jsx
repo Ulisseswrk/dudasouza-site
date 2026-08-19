@@ -79,7 +79,7 @@ export default function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="font-['Epilogue'] text-[0.75rem] font-bold uppercase tracking-[0.22em] text-white transition duration-200 hover:text-[#C8264A]"
+              className="font-['Epilogue'] text-[0.75rem] font-bold uppercase tracking-[0.22em] text-white transition duration-200 hover:text-[#FF5E00]"
             >
               {l.label}
             </a>
@@ -95,7 +95,7 @@ export default function Header() {
           onClick={() => setOpen(false)}
           className="relative z-50 flex shrink-0 flex-col items-center justify-center text-center leading-none"
         >
-          <span className="font-['Anton'] text-[1.8rem] uppercase tracking-[0.08em] text-[#C8264A] sm:text-[2.3rem]">
+          <span className="font-['Anton'] text-[1.8rem] uppercase tracking-[0.08em] text-[#FF5E00] sm:text-[2.3rem]">
             DUDA
           </span>
           <span className="font-['Anton'] text-[1.8rem] uppercase tracking-[0.08em] text-white sm:text-[2.3rem]">
@@ -109,7 +109,7 @@ export default function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="font-['Epilogue'] text-[0.75rem] font-bold uppercase tracking-[0.22em] text-white transition duration-200 hover:text-[#C8264A]"
+              className="font-['Epilogue'] text-[0.75rem] font-bold uppercase tracking-[0.22em] text-white transition duration-200 hover:text-[#FF5E00]"
             >
               {l.label}
             </a>
@@ -122,7 +122,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="text-white transition-all duration-200 hover:-translate-y-[2px] hover:text-[#C8264A]"
+              className="text-white transition-all duration-200 hover:-translate-y-[2px] hover:text-[#FF5E00]"
             >
               <InstagramIcon size={26} />
             </a>
@@ -132,7 +132,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="text-white transition-all duration-200 hover:-translate-y-[2px] hover:text-[#C8264A]"
+              className="text-white transition-all duration-200 hover:-translate-y-[2px] hover:text-[#FF5E00]"
             >
               <WhatsAppIcon size={26} />
             </a>
@@ -179,7 +179,7 @@ export default function Header() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="font-['Anton'] text-[2.5rem] uppercase leading-none tracking-[0.04em] text-white transition duration-200 hover:scale-105 hover:text-[#C8264A]"
+              className="font-['Anton'] text-[2.5rem] uppercase leading-none tracking-[0.04em] text-white transition duration-200 hover:scale-105 hover:text-[#FF5E00]"
             >
               {l.label}
             </a>
@@ -190,7 +190,7 @@ export default function Header() {
               href={IG}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white transition-all duration-200 hover:scale-110 hover:text-[#C8264A]"
+              className="text-white transition-all duration-200 hover:scale-110 hover:text-[#FF5E00]"
             >
               <InstagramIcon size={38} />
             </a>
@@ -199,7 +199,7 @@ export default function Header() {
               href={WPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white transition-all duration-200 hover:scale-110 hover:text-[#C8264A]"
+              className="text-white transition-all duration-200 hover:scale-110 hover:text-[#FF5E00]"
             >
               <WhatsAppIcon size={38} />
             </a>

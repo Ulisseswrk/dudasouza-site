@@ -87,7 +87,7 @@ export default function Credencial() {
               }}
             >
               Presença de palco?{' '}
-              <span style={{ color: '#C8264A' }}> é aqui mesmo</span>
+              <span style={{ color: '#FF5E00' }}> é aqui mesmo</span>
             </h2>
           </div>
 
@@ -223,8 +223,8 @@ export default function Credencial() {
             transition: 'border-color 0.22s ease, background 0.22s ease',
           }}
           onMouseEnter={e => {
-            e.currentTarget.style.borderColor = '#C8264A'
-            e.currentTarget.style.background = 'rgba(200,38,74,0.12)'
+            e.currentTarget.style.borderColor = '#FF5E00'
+            e.currentTarget.style.background = 'rgba(255,94,0,0.12)'
           }}
           onMouseLeave={e => {
             e.currentTarget.style.borderColor = 'rgba(255,255,255,0.32)'

@@ -62,7 +62,7 @@ export default function Repertorio() {
         <div className="section-header" style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
           <div ref={eyebrowRef} style={{ display: 'inline-block', overflow: 'hidden' }}>
             <span
-              className="eyebrow text-[#C8264A]"
+              className="eyebrow text-[#FF5E00]"
               style={{
                 display: 'block',
                 transform: eyebrowVisible ? 'translateY(0)' : 'translateY(100%)',
@@ -82,7 +82,7 @@ export default function Repertorio() {
                 transition: 'transform 1.6s cubic-bezier(0.22,1,0.36,1), opacity 0.6s ease 0.1s',
               }}
             >
-              Música para <span className="text-[#C8264A]">todo gosto</span>
+              Música para <span className="text-[#FF5E00]">todo gosto</span>
             </h2>
           </div>
 
@@ -155,7 +155,7 @@ export default function Repertorio() {
                 </h3>
 
                 <div style={{ marginBottom: '1rem' }}>
-                  <span className="eyebrow text-[#C8264A]" style={{ fontSize: '0.58rem', marginBottom: '0.4rem' }}>
+                  <span className="eyebrow text-[#FF5E00]" style={{ fontSize: '0.58rem', marginBottom: '0.4rem' }}>
                     Artistas
                   </span>
                   <p className="text-white/70" style={{ fontSize: '0.8rem', lineHeight: '1.6' }}>
@@ -164,13 +164,13 @@ export default function Repertorio() {
                 </div>
 
                 <div>
-                  <span className="eyebrow text-[#C8264A]" style={{ fontSize: '0.58rem', marginBottom: '0.4rem' }}>
+                  <span className="eyebrow text-[#FF5E00]" style={{ fontSize: '0.58rem', marginBottom: '0.4rem' }}>
                     Exemplos
                   </span>
                   <ul style={{ fontSize: '0.8rem' }}>
                     {g.songs.map(s => (
                       <li key={s} className="text-white/55 flex items-center" style={{ gap: '0.5rem', marginBottom: '0.2rem' }}>
-                        <span className="text-[#C8264A]" style={{ flexShrink: 0 }}>—</span>
+                        <span className="text-[#FF5E00]" style={{ flexShrink: 0 }}>—</span>
                         {s}
                       </li>
                     ))}

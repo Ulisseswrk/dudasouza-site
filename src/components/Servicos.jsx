@@ -9,8 +9,8 @@ const formacoes = [
     id: '01',
     label: 'Solo Acústico',
     sub: 'Para eventos mais intimistas.',
-    desc: 'Voz e violão clássico. Trás bastante intimidade e versatilidade para eventos que pedem mais leveza e música de verdade.',
-    tag: 'Ideal para coquetéis, happy hours e jantares.',
+    desc: 'Voz e violão clássico. Trás bastante intimidade e versatilidade para eventos que pedem mais leveza e música boa.',
+    tag: 'Ideal para coquetéis, happy hours, jantares e festas',
     img: '/img/foto-solo.jpeg',
     imgPosition: 'center 50%',
     destaque: false,
@@ -19,7 +19,7 @@ const formacoes = [
     id: '02',
     label: 'Show duo',
     sub: 'Nosso formato mais pedido.',
-    desc: 'Duda + percussão (meia-lua, cajón ou bateria). Com opção de vocal feminino. Formação adaptável ao evento.',
+    desc: 'Duda + percussão (meia-lua, cajón ou bateria). Com opção de vocal e/ou instumentos como teclado ou segundo violão. Formação adaptável ao evento.',
     tag: 'A escolha perfeita para casamentos e aniversários.',
     img: '/img/foto-dupla.jpeg',
     imgPosition: 'center 40%',
@@ -167,7 +167,7 @@ function Card({ label, sub, desc, tag, img, imgPosition = 'center', imgScale = 1
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
               color: '#fff',
-              background: '#C8264A',
+              background: '#FF5E00',
               padding: '0.3rem 0.75rem',
               borderRadius: '2px',
             }}
@@ -198,7 +198,7 @@ function Card({ label, sub, desc, tag, img, imgPosition = 'center', imgScale = 1
         <div
           style={{
             height: '3px',
-            background: '#C8264A',
+            background: '#FF5E00',
             marginTop: '0.45rem',
             width: destaque ? '100%' : '65%',
             transition: 'width 0.3s ease',
@@ -264,12 +264,12 @@ function Card({ label, sub, desc, tag, img, imgPosition = 'center', imgScale = 1
           letterSpacing: '0.22em',
           textTransform: 'uppercase',
           color: '#fff',
-          border: '1.5px solid #C8264A',
+          border: '1.5px solid #FF5E00',
           padding: '1rem',
           borderRadius: '6px',
           textDecoration: 'none',
           transition: 'background 0.28s ease, border-color 0.28s ease',
-          background: hovered ? '#C8264A' : destaque ? 'rgba(200,38,74,0.12)' : 'transparent',
+          background: hovered ? '#FF5E00' : destaque ? 'rgba(255,94,0,0.12)' : 'transparent',
           marginTop: 'auto',
         }}
       >

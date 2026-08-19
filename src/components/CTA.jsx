@@ -39,13 +39,13 @@ export default function CTA() {
         >
           {/* Conteúdo centralizado */}
           <div style={{ maxWidth: '620px', textAlign: 'center', marginInline: 'auto' }}>
-            <span className="eyebrow text-[#C8264A]" style={{ marginBottom: '1.25rem' }}>
+            <span className="eyebrow text-[#FF5E00]" style={{ marginBottom: '1.25rem' }}>
               ✦ Contratação ✦
             </span>
 
             <h2 className="title-hero text-white" style={{ marginBottom: '1.25rem' }}>
               Faça seu evento ser{' '}
-              <span className="text-[#C8264A]">inesquecível</span>
+              <span className="text-[#FF5E00]">inesquecível</span>
             </h2>
 
             <p

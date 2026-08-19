@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start order-1">
             <a href="#" className="flex items-baseline gap-0.5 hover:opacity-70 transition-opacity">
-              <span className="text-[1.8rem] text-[#C8264A] tracking-tighter" style={{ fontFamily: 'Anton, sans-serif' }}>DUDA</span>
+              <span className="text-[1.8rem] text-[#FF5E00] tracking-tighter" style={{ fontFamily: 'Anton, sans-serif' }}>DUDA</span>
               <span className="text-[1.8rem] text-white tracking-tighter" style={{ fontFamily: 'Anton, sans-serif' }}>SOUZA</span>
             </a>
             <span className="text-[0.6rem] uppercase tracking-[0.3em] text-white/40 mt-[-5px]">

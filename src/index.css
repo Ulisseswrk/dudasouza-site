@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand:      #C8264A;
-  --color-brand-dark: #a31e3c;
+  --color-brand:      #FF5E00;
+  --color-brand-dark: #CC4B00;
 }
 
 /* ─── Scroll Reveal — timing ref: bandanyx.com.br (0.80s ease) ── */
@@ -272,7 +272,7 @@ img, video { max-width: 100%; display: block; }
   transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease;
   white-space: nowrap;
 }
-.hero-btn-primary         { background: #C8264A; color: #fff; border: 1.5px solid #C8264A; }
+.hero-btn-primary         { background: #FF5E00; color: #fff; border: 1.5px solid #FF5E00; }
 .hero-btn-primary:hover   { transform: scale(1.03); filter: brightness(1.12); }
 .hero-btn-ghost           { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
 .hero-btn-ghost:hover     { transform: scale(1.03); filter: brightness(1.15); background: rgba(255,255,255,0.08); }
@@ -305,11 +305,11 @@ img, video { max-width: 100%; display: block; }
 .btn:hover  { transform: translateY(-1px); }
 .btn:active { transform: translateY(0);    }
 
-.btn-primary            { background: #C8264A; color: #fff; border-color: #C8264A; }
-.btn-primary:hover      { background: #a31e3c; border-color: #a31e3c; box-shadow: 0 6px 20px rgba(200,38,74,0.35); }
+.btn-primary            { background: #FF5E00; color: #fff; border-color: #FF5E00; }
+.btn-primary:hover      { background: #CC4B00; border-color: #CC4B00; box-shadow: 0 6px 20px rgba(255,94,0,0.35); }
 
-.btn-outline-brand      { background: transparent; color: #C8264A; border-color: #C8264A; }
-.btn-outline-brand:hover{ background: #C8264A; color: #fff; box-shadow: 0 6px 20px rgba(200,38,74,0.28); }
+.btn-outline-brand      { background: transparent; color: #FF5E00; border-color: #FF5E00; }
+.btn-outline-brand:hover{ background: #FF5E00; color: #fff; box-shadow: 0 6px 20px rgba(255,94,0,0.28); }
 
 .btn-outline-white      { background: transparent; color: #fff; border-color: rgba(255,255,255,0.65); }
 .btn-outline-white:hover{ background: #fff; color: #111; border-color: #fff; }
@@ -352,7 +352,7 @@ img, video { max-width: 100%; display: block; }
 .divider-brand {
   width: 2.5rem;
   height: 2px;
-  background: #C8264A;
+  background: #FF5E00;
   margin-bottom: 1.25rem;
 }
 /* ─── Micro telas (< 355px) ─────────────────────────────── */
