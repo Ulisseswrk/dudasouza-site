@@ -169,33 +169,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-
-      {/* Scroll hint */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '2rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '0.5rem',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: 'Oswald, sans-serif',
-            fontSize: '0.5rem',
-            letterSpacing: '0.38em',
-            textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.22)',
-          }}
-        >
-          scroll
-        </span>
-        <div style={{ width: '1px', height: '2rem', background: 'rgba(255,255,255,0.12)' }} />
-      </div>
     </section>
   )
 }
