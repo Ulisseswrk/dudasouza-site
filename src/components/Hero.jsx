@@ -124,7 +124,7 @@ export default function Hero() {
             maxWidth: '440px',
           }}
         >
-          MPB, Rock Nacional e muito mais... Repertório sob medida para
+          O melhor do eclético: MPB, Rock Nacional, Sertanejo e muito mais... Repertório sob medida para
           casamentos, formaturas, eventos corporativos e bares.
         </p>
 

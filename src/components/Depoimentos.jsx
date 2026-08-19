@@ -198,7 +198,7 @@ export default function Depoimentos() {
               backdropFilter: 'blur(8px)',
               transition: 'background 0.5s ease',
             }}
-            onMouseEnter={e => e.currentTarget.style.background = 'rgba(181, 181, 181, 0.8)'}
+            onMouseEnter={e => e.currentTarget.style.background = 'rgba(255, 94, 0, 0.85)'}
             onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.55)'}
           >
             Garanta o melhor para sua festa aqui

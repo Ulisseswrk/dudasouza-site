@@ -353,7 +353,7 @@ img, video { max-width: 100%; display: block; }
   width: 2.5rem;
   height: 2px;
   background: #FF5E00;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 /* ─── Micro telas (< 355px) ─────────────────────────────── */
 @media (max-width: 355px) {

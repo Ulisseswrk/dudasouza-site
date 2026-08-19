@@ -3,25 +3,25 @@ import { useRef, useEffect, useState } from 'react'
 
 const genres = [
   {
-    id: 'mpb',
-    label: 'MPB',
+    id: 'samba-pagode',
+    label: 'Samba & Pagode',
     image: '/img/foto-ceu-aesthetic.jpeg',
-    artists: ['Tim Maia', 'Marisa Monte', 'Rita Lee', 'Gilberto Gil', 'Jorge Ben Jor', 'Djavan', ],
-    songs: ['Descobridor dos Sete Mares', 'Mania de Você', 'Samurai', 'Anunciação'],
+    artists: ['Pericles', 'Revelação', 'Fundo de Quintal', 'Thiaguinho', 'Arlindo Cruz', 'Ferrugem'],
+    songs: ['Melhor eu Ir', 'Falta Você', 'Será que é Amor', 'Tá na Cara'],
   },
   {
     id: 'reggae',
     label: 'Reggae',
     image: '/img/foto-tocando-beco.jpeg',
-    artists: ['Natiruts', 'Maneva', 'Bob Marley', 'Skank','Rappa','Armandinho'],
-    songs: ['Could you be loved', 'Andei só', 'Vou Deixar', 'Me namora'],
+    artists: ['Natiruts', 'Maneva', 'Bob Marley','Cidade Negra','Armandinho'],
+    songs: ['Is This Love', 'Andei Só', 'Vou Deixar', 'Me namora']
   },
   {
-    id: 'rock',
-    label: 'Rock Nacional',
+    id: 'internacional',
+    label: 'Internacional',
     image: '/img/foto-bar.jpeg',
-    artists: ['Legião Urbana', 'Titãs', 'Raul Seixas', 'Charlie Brown Jr.', 'Capital Inicial', 'Os Paralamas'],
-    songs: ['Exagerado', 'Eduardo e Mônica', 'O que sobrou do céu', 'Por Você'],
+    artists: ['Elvis Presley', 'Amy Winehouse', 'Jack Johsson', 'Beatles', 'Olivia Dean'],
+    songs: ['Suspicious Mind', 'Valerie', 'Upside Down', 'Dont Let me Down']
   },
 ]
 

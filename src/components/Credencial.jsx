@@ -102,12 +102,12 @@ export default function Credencial() {
               maxWidth: '500px',
             }}
           >
-            Nosso repertório que vai de{' '}
+            Com um repertório de{' '}
             <strong style={{ color: '#fff', fontWeight: 600 }}>
-              Marilia Menconça a Steve Wonder
+              diversos estilos musicais
             </strong>
-            , passando por MPB e Rock Nacional, muda qualquer ambiente.
-            Ta cansado de eventos sem energia? Então você está no lugar certo.
+            , levamos música de qualidade para o seu evento.
+            Se você busca animação para suas comemorações, então você está no lugar certo.
           </p>
 
           {/* Parágrafo 2 */}

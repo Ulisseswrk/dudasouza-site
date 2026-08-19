@@ -9,8 +9,8 @@ const formacoes = [
     id: '01',
     label: 'Solo Acústico',
     sub: 'Para eventos mais intimistas.',
-    desc: 'Voz e violão clássico. Trás bastante intimidade e versatilidade para eventos que pedem mais leveza e música boa.',
-    tag: 'Ideal para coquetéis, happy hours, jantares e festas',
+    desc: 'O clássico voz e violão. Trás bastante intimidade e versatilidade para eventos que pedem mais leveza e música boa.',
+    tag: 'Ideal para coquetéis, happy hours, jantares e festas.',
     img: '/img/foto-solo.jpeg',
     imgPosition: 'center 50%',
     destaque: false,
@@ -19,8 +19,8 @@ const formacoes = [
     id: '02',
     label: 'Show duo',
     sub: 'Nosso formato mais pedido.',
-    desc: 'Duda + percussão (meia-lua, cajón ou bateria). Com opção de vocal e/ou instumentos como teclado ou segundo violão. Formação adaptável ao evento.',
-    tag: 'A escolha perfeita para casamentos e aniversários.',
+    desc: 'Duda (Voz e Violão) + percussão (meia-lua, cajón ou bateria). Com opção de vocal e/ou instumentos como teclado ou segundo violão. Formação adaptável ao evento.',
+    tag: 'A escolha perfeita para casamentos, aniversários e eventos corporativos.',
     img: '/img/foto-dupla.jpeg',
     imgPosition: 'center 40%',
     destaque: true,
@@ -29,8 +29,8 @@ const formacoes = [
     id: '03',
     label: 'Trio',
     sub: 'Para eventos de médio porte.',
-    desc: 'Duda + percussão + baixo (ou teclado). Um som cheio de groove, mantendo o charme e o clima do formato acústico.',
-    tag: 'Ótimo para casamentos maiores e eventos corporativos.',
+    desc: 'Duda (Voz e Guitarra) + bateria + baixo. Um som cheio de groove, mantendo clima e animação para o seu evento.',
+    tag: 'Ótimo para festas de casamento, aniversários e eventos corporativos maiores.',
     img: '/img/foto-trio.jpeg',
     imgPosition: 'center 0%',
     destaque: false,
@@ -38,9 +38,9 @@ const formacoes = [
   {
     id: '04',
     label: 'Banda Completa',
-    sub: 'Para eventos de alto impacto.',
-    desc: 'Aqui levamos a força máxima. Para quem quer fazer barulho de verdade em grandes eventos, festivais e festas maiores. Aqui é o lugar.',
-    tag: 'Perfeito para festivais, formaturas e shows abertos.',
+    sub: 'Para eventos de grande porte.',
+    desc: 'Aqui levamos a força máxima. Para quem deseja o melhor da música e com a emoção que só uma banda completa trás.',
+    tag: 'Perfeito para festivais, formaturas e grandes eventos.',
     img: '/img/foto-banda.png',
     destaque: false,
   },
@@ -273,7 +273,7 @@ function Card({ label, sub, desc, tag, img, imgPosition = 'center', imgScale = 1
           marginTop: 'auto',
         }}
       >
-        Garanta sua data
+        Reserve sua data
       </a>
     </div>
   )
