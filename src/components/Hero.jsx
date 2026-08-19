@@ -95,22 +95,6 @@ export default function Hero() {
           gap: '0',
         }}
       >
-        {/* Eyebrow */}
-        <span
-          style={{
-            fontFamily: 'Oswald, sans-serif',
-            fontSize: '0.62rem',
-            fontWeight: 600,
-            letterSpacing: '0.38em',
-            textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.6)',
-            marginBottom: '1.5rem',
-            display: 'block',
-          }}
-        >
-          Músico Profissional para o seu evento
-        </span>
-
         {/* Headline */}
         <h1
           style={{
