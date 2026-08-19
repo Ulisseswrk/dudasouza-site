@@ -1,3 +1,5 @@
+import { useReveal } from '../hooks/useReveal'
+
 const WPP = 'https://wa.me/5511999999999'
 
 function WppIcon() {
@@ -9,51 +11,67 @@ function WppIcon() {
 }
 
 export default function CTA() {
+  const contentRef = useReveal()
+
   return (
-    <section className="relative section-py-xl overflow-hidden">
-      {/* BG */}
+    <section className="relative overflow-hidden" style={{ background: '#000', minHeight: 'clamp(420px, 60vh, 680px)', display: 'flex', alignItems: 'center' }}>
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/img/foto-ceu-aesthetic.jpeg')" }}
+        className="reveal-bg-rise"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: "url('/img/pessoas-cantando.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.12,
+          pointerEvents: 'none',
+          willChange: 'transform',
+          zIndex: 0,
+        }}
       />
-      <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.78)' }} />
 
-      {/* Conteúdo */}
-      <div className="relative z-10 wrap text-center text-white">
-        <span className="eyebrow text-[#C8264A]" style={{ marginBottom: '1.5rem' }}>
-          ✦ Contratação ✦
-        </span>
+      <div ref={contentRef} className="relative z-10 wrap reveal" style={{ paddingBlock: 'clamp(3rem, 6vw, 5rem)', width: '100%' }}>
 
-        <h2
-          className="title-section text-white mx-auto"
-          style={{ maxWidth: '680px', marginBottom: '1.5rem' }}
+        {/* Layout: texto à esquerda + botão à direita no desktop */}
+        <div
+          className="flex flex-col lg:flex-row lg:items-end lg:justify-between"
+          style={{ gap: 'clamp(2rem, 5vw, 3.5rem)' }}
         >
-          Faça seu evento ser{' '}
-          <span className="text-[#C8264A]">inesquecível</span>
-        </h2>
+          {/* Conteúdo centralizado */}
+          <div style={{ maxWidth: '620px', textAlign: 'center', marginInline: 'auto' }}>
+            <span className="eyebrow text-[#C8264A]" style={{ marginBottom: '1.25rem' }}>
+              ✦ Contratação ✦
+            </span>
 
-        <p
-          className="text-white/52 mx-auto"
-          style={{
-            maxWidth: '460px',
-            fontSize: 'clamp(0.96rem, 2vw, 1.06rem)',
-            lineHeight: '1.85',
-            marginBottom: '3rem',
-          }}
-        >
-          Entre em contato agora e garanta Duda Souza para o seu evento.
-          Orçamento sem compromisso.
-        </p>
+            <h2 className="title-hero text-white" style={{ marginBottom: '1.25rem' }}>
+              Faça seu evento ser{' '}
+              <span className="text-[#C8264A]">inesquecível</span>
+            </h2>
 
-        <a
-          href={WPP}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-wpp"
-          style={{ paddingInline: '3.25rem', paddingBlock: '1.1rem' }}
-        >
-          <WppIcon /> Falar pelo WhatsApp
-        </a>
+            <p
+              className="text-white/50"
+              style={{
+                fontSize: 'clamp(0.94rem, 1.8vw, 1.04rem)',
+                lineHeight: '1.85',
+                marginBottom: '2rem',
+              }}
+            >
+              Entre em contato agora e garanta Duda Souza para o seu evento.
+              Orçamento sem compromisso.
+            </p>
+
+            <a
+              href={WPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-wpp"
+              style={{ paddingInline: '2.75rem', paddingBlock: '1.1rem' }}
+            >
+              <WppIcon /> Falar pelo WhatsApp
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   )

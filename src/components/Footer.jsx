@@ -1,103 +1,54 @@
+import { useReveal } from '../hooks/useReveal'
+
 const WPP = 'https://wa.me/5511999999999'
 
-const navLinks = [
-  { label: 'Sobre',      href: '#sobre' },
-  { label: 'Repertório', href: '#repertorio' },
-  { label: 'Eventos',    href: '#eventos' },
-  { label: 'Galeria',    href: '#galeria' },
-]
+function IgIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="22" height="22" aria-hidden><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+}
 
-function IgIcon()  { return <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> }
-function YtIcon()  { return <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> }
-function SpIcon()  { return <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> }
-
-const socials = [
-  { icon: <IgIcon />, href: '#', label: 'Instagram' },
-  { icon: <YtIcon />, href: '#', label: 'YouTube' },
-  { icon: <SpIcon />, href: '#', label: 'Spotify' },
-]
+function WppIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="22" height="22" aria-hidden><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9L21 3z"/></svg>
+}
 
 export default function Footer() {
+  const ref = useReveal({ threshold: 0.1 })
+
   return (
-    <footer id="contato" className="bg-[#0d0d0d] text-white"
-      style={{ paddingTop: 'clamp(4rem, 10vw, 7rem)', paddingBottom: '2.5rem' }}>
-      <div className="wrap">
-
-        {/* Grid principal */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16
-          pb-14 border-b border-white/8">
-
-          {/* Brand + Social */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <a href="#" className="flex items-baseline gap-0.5 mb-6">
-              <span className="text-[2rem] text-[#C8264A]" style={{ fontFamily: 'Anton, sans-serif' }}>DUDA</span>
-              <span className="text-[2rem] text-white"    style={{ fontFamily: 'Anton, sans-serif' }}>SOUZA</span>
+    <footer className="bg-black text-white">
+      <div
+        ref={ref}
+        className="wrap reveal"
+        style={{ paddingTop: 'clamp(3.5rem, 7vw, 5.5rem)', paddingBottom: 'clamp(3.5rem, 7vw, 5.5rem)' }}
+      >
+        <span id="contato" className="scroll-anchor" aria-hidden="true" />
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col items-center md:items-start order-1">
+            <a href="#" className="flex items-baseline gap-0.5 hover:opacity-70 transition-opacity">
+              <span className="text-[1.8rem] text-[#C8264A] tracking-tighter" style={{ fontFamily: 'Anton, sans-serif' }}>DUDA</span>
+              <span className="text-[1.8rem] text-white tracking-tighter" style={{ fontFamily: 'Anton, sans-serif' }}>SOUZA</span>
             </a>
+            <span className="text-[0.6rem] uppercase tracking-[0.3em] text-white/40 mt-[-5px]">
+              Músico Profissional
+            </span>
+          </div>
 
-            <p className="text-white/38 leading-relaxed mb-8"
-              style={{ fontSize: '0.88rem', lineHeight: '1.8', maxWidth: '300px' }}>
-              Músico profissional especializado em MPB, Reggae e Rock Nacional.
-              Presença garantida para tornar seu evento inesquecível.
+          <div className="order-3 md:order-2">
+            <p className="text-white/30 font-light tracking-wide text-center" style={{ fontSize: '0.8rem' }}>
+              © 2024 Duda Souza <span className="mx-2 text-white/10">|</span> Todos os direitos reservados
             </p>
-
-            <div className="flex gap-3">
-              {socials.map(s => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="border border-white/12 hover:border-[#C8264A] hover:text-[#C8264A] text-white/38
-                    transition-all duration-200 p-3 flex items-center justify-center">
-                  {s.icon}
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Nav */}
-          <div>
-            <h4 className="eyebrow text-[#C8264A] mb-8" style={{ fontSize: '0.62rem' }}>Navegação</h4>
-            <ul className="space-y-4">
-              {navLinks.map(l => (
-                <li key={l.href}>
-                  <a href={l.href}
-                    className="label text-white/45 hover:text-white transition-colors duration-200"
-                    style={{ fontSize: '0.82rem' }}>
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <div className="flex items-center gap-6 order-2 md:order-3">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              className="text-white/50 hover:text-white transition-colors duration-300">
+              <IgIcon />
+            </a>
+            <a href={WPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+              className="text-white/50 hover:text-white transition-colors duration-300">
+              <WppIcon />
+            </a>
           </div>
-
-          {/* Contato */}
-          <div>
-            <h4 className="eyebrow text-[#C8264A] mb-8" style={{ fontSize: '0.62rem' }}>Contato</h4>
-            <div className="space-y-5">
-              <a href={WPP} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 text-white/45 hover:text-white transition-colors"
-                style={{ fontSize: '0.88rem' }}>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] shrink-0" />
-                (11) 99999-9999
-              </a>
-              <a href="mailto:contato@dudasouza.com.br"
-                className="flex items-center gap-3 text-white/45 hover:text-white transition-colors"
-                style={{ fontSize: '0.88rem' }}>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C8264A] shrink-0" />
-                contato@dudasouza.com.br
-              </a>
-            </div>
-          </div>
-
         </div>
-
-        {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/20"
-          style={{ fontSize: '0.75rem' }}>
-          <p>© 2024 Duda Souza · Todos os direitos reservados</p>
-          <p className="label" style={{ fontSize: '0.65rem', letterSpacing: '0.2em' }}>
-            MPB · Reggae · Rock Nacional
-          </p>
-        </div>
-
       </div>
     </footer>
   )

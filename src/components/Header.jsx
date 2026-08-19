@@ -6,12 +6,12 @@ const IG = 'https://instagram.com/dudasouza'
 const linksLeft = [
   { label: 'Sobre', href: '#sobre' },
   { label: 'Repertório', href: '#repertorio' },
-  { label: 'Eventos', href: '#eventos' },
+  { label: 'Depoimentos', href: '#depoimentos' },
 ]
 
 const linksRight = [
-  { label: 'Galeria', href: '#galeria' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Formações', href: '#servicos' },
+  { label: 'Contato', href: WPP },
 ]
 
 function InstagramIcon({ size = 34 }) {
@@ -66,18 +66,15 @@ export default function Header() {
   }, [open])
 
   return (
-    <header
-      className={`fixed inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'top-0 bg-black/90 py-3 backdrop-blur-md shadow-lg'
-          : 'top-5 bg-transparent py-5'
-      }`}
-    >
+    <header className="fixed inset-x-0 top-5 z-[100] py-5">
+      {scrolled && (
+        <div className="pointer-events-none absolute inset-x-0 -top-5 -bottom-5 -z-10 bg-black/90 shadow-lg backdrop-blur-md" />
+      )}
       {/* Aumentado o padding horizontal aqui: px-10 no mobile */}
       <div className="mx-auto flex w-full items-center justify-between px-10 sm:px-12 md:px-12 lg:px-16">
         
         {/* ESQUERDA */}
-        <nav className="hidden flex-1 items-center justify-center gap-8 md:flex lg:gap-12">
+        <nav className="hidden flex-1 items-center justify-center gap-8 lg:flex lg:gap-12">
           {linksLeft.map((l) => (
             <a
               key={l.href}
@@ -90,7 +87,7 @@ export default function Header() {
         </nav>
 
         {/* Espaçador para Mobile */}
-        <div className="flex flex-1 md:hidden" />
+        <div className="flex flex-1 lg:hidden" />
 
         {/* CENTRO */}
         <a
@@ -107,7 +104,7 @@ export default function Header() {
         </a>
 
         {/* DIREITA */}
-        <div className="hidden flex-1 items-center justify-center gap-8 md:flex lg:gap-12">
+        <div className="hidden flex-1 items-center justify-center gap-8 lg:flex lg:gap-12">
           {linksRight.map((l) => (
             <a
               key={l.href}
@@ -143,7 +140,7 @@ export default function Header() {
         </div>
 
         {/* Toggle do Menu Mobile - Adicionado pr-2 para empurrar um pouco mais para dentro */}
-        <div className="relative z-50 flex flex-1 justify-end pr-2 md:hidden">
+        <div className="relative z-50 flex flex-1 justify-end pr-2 lg:hidden">
           <button
             className="group flex h-12 w-12 items-center justify-center transition-all duration-300 focus:outline-none"
             onClick={() => setOpen((o) => !o)}
@@ -172,7 +169,7 @@ export default function Header() {
 
       {/* OVERLAY Menu Mobile - Também atualizado para px-10 para alinhar perfeitamente */}
       <div
-        className={`fixed inset-0 -z-10 flex h-[100dvh] w-full flex-col justify-center bg-black/98 px-10 transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 -z-10 flex h-[100dvh] w-full flex-col justify-center bg-black/98 px-10 transition-all duration-500 lg:hidden ${
           open ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         }`}
       >

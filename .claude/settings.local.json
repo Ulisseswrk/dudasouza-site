@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:bandanyx.com.br)"
+      "WebFetch(domain:bandanyx.com.br)",
+      "WebFetch(domain:posturai-jet.vercel.app)",
+      "WebSearch",
+      "WebFetch(domain:www.bandanyx.com.br)"
     ]
   }
 }

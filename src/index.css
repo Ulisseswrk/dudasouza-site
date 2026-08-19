@@ -5,15 +5,170 @@
   --color-brand-dark: #a31e3c;
 }
 
+/* ─── Scroll Reveal — timing ref: bandanyx.com.br (0.80s ease) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.is-visible       { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-left.is-visible  { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-right.is-visible { opacity: 1; transform: translateX(0); }
+
+/* Ref: bandanyx — fade + scale 0.97→1, 0.8s ease */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.97) translateY(20px);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+.reveal-scale.is-visible { opacity: 1; transform: scale(1) translateY(0); }
+
+/* Stagger — delay base 0.1s (dentro do ritmo 0.8s global) */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.stagger.is-visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay:0s; }
+.stagger.is-visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay:.1s; }
+.stagger.is-visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay:.2s; }
+.stagger.is-visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay:.3s; }
+.stagger.is-visible > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay:.4s; }
+.stagger.is-visible > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay:.5s; }
+
+/* Card hover — "Fast" ref bandanyx (~0.22s ease) */
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.14);
+}
+
+/* Reveal grande — ativado quando container pai ganha is-visible */
+.reveal-large {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 2.3s ease, transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-large.is-visible,
+.reveal.is-visible .reveal-large { opacity: 1; transform: translateY(0); }
+
+/* Parágrafo com delay maior — entrada defasada */
+.reveal-late {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+}
+.reveal-late.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Clip reveal — texto sobe de baixo para cima (curtain effect) */
+.clip-reveal { overflow: hidden; }
+.clip-inner {
+  display: block;
+  transform: translateY(45%);
+  opacity: 0;
+  transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.55s ease;
+}
+.clip-reveal.is-visible .clip-inner { transform: translateY(0); opacity: 1; }
+
+
+/* Credencial bg — sobe levemente ao entrar na tela */
+.reveal-bg-rise {
+  transform: translateY(28px) scale(1.06);
+  transition: transform 0.8s ease;
+}
+.reveal-bg-rise.is-visible { transform: translateY(0) scale(1.06); }
+
+/* Credencial fotos — deslizam da direita para a posição */
+.reveal-from-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+.reveal-from-right.is-visible { opacity: 1; transform: translateX(0); }
+
+/* Quebra de linha forçada só em mobile ≤476px */
+.br-476 { display: none; }
+@media (max-width: 476px) { .br-476 { display: block; } }
+
+@media (max-width: 600px) {
+  .sobre-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ─── Credencial bg pulse ────────────────────────────────── */
+@keyframes credencial-pulse {
+  0%, 100% { opacity: 1;    transform: scale(1);    }
+  50%       { opacity: 0.5; transform: scale(1.15); }
+}
+
 /* ─── Reset ──────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html {
+  scroll-behavior: smooth;
+  background: #000;
+}
+
+:root {
+  --offset-sobre:       75px;
+  --offset-repertorio:  125px;
+  --offset-depoimentos: 170px;
+  --offset-servicos:    140px;
+  --offset-contato:     140px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  :root {
+    --offset-sobre:       120px;
+    --offset-repertorio:  140px;
+    --offset-depoimentos: 260px;
+    --offset-servicos:    155px;
+    --offset-contato:     155px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  :root {
+    --offset-sobre:       130px;
+    --offset-repertorio:  150px;
+    --offset-depoimentos: 150px;
+    --offset-servicos:    165px;
+    --offset-contato:     165px;
+  }
+}
+
+#sobre       { scroll-margin-top: var(--offset-sobre); }
+#repertorio  { scroll-margin-top: var(--offset-repertorio); }
+#depoimentos { scroll-margin-top: var(--offset-depoimentos); }
+#servicos    { scroll-margin-top: var(--offset-servicos); }
+#contato     { scroll-margin-top: var(--offset-contato); }
+
+/* Marcador de âncora: fica exatamente onde o conteúdo visível
+   começa (depois do padding interno da seção), para o link não
+   ter que "pular" o padding inteiro + o offset do header juntos. */
+.scroll-anchor { display: block; height: 0; }
 
 body {
+  overflow-x: clip;
+  background: #000;
   font-family: 'Epilogue', sans-serif;
-  color: #111;
-  overflow-x: hidden;
+  color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -82,6 +237,40 @@ img, video { max-width: 100%; display: block; }
   font-size: clamp(0.94rem, 1.8vw, 1.05rem);
   line-height: 1.85;
   color: #6b7280; /* gray-500 */
+}
+
+/* ─── Hero ───────────────────────────────────────────────── */
+.hero-content { padding-top: 10rem; }
+@media (max-width: 767px) {
+  .hero-content { padding-top: clamp(14rem, 32vw, 22rem); }
+}
+
+/* ─── Botões Hero ────────────────────────────────────────── */
+.hero-btn-primary,
+.hero-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 2.4rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+.hero-btn-primary         { background: #C8264A; color: #fff; border: 1.5px solid #C8264A; }
+.hero-btn-primary:hover   { transform: scale(1.03); filter: brightness(1.12); }
+.hero-btn-ghost           { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+.hero-btn-ghost:hover     { transform: scale(1.03); filter: brightness(1.15); background: rgba(255,255,255,0.08); }
+
+@media (max-width: 480px) {
+  .hero-btn-primary,
+  .hero-btn-ghost { width: 100%; }
 }
 
 /* ─── Botões ─────────────────────────────────────────────── */
@@ -156,4 +345,32 @@ img, video { max-width: 100%; display: block; }
   height: 2px;
   background: #C8264A;
   margin-bottom: 1.25rem;
+}
+/* ─── Micro telas (< 355px) ─────────────────────────────── */
+@media (max-width: 355px) {
+  /* Container */
+  .wrap { padding-inline: 0.9rem; }
+
+  /* Tipografia */
+  .title-hero    { font-size: 1.9rem; }
+  .title-section { font-size: 1.5rem; }
+  .title-card    { font-size: 1.3rem; }
+  .eyebrow       { letter-spacing: 0.22em; font-size: 0.58rem; }
+  .body-text     { font-size: 0.88rem; }
+
+  /* Botões — empilhados e largura total */
+  .btn { padding: 0.9rem 1.5rem; font-size: 0.7rem; width: 100%; }
+  .hero-btn-primary,
+  .hero-btn-ghost  { width: 100%; padding: 0.9rem 1.25rem; font-size: 0.68rem; }
+
+  /* Hero */
+  .hero-content { padding-top: clamp(10rem, 45vw, 14rem); }
+
+  /* Seções */
+  .section-py    { padding-block: 3rem; }
+  .section-py-xl { padding-block: 4rem; }
+  .section-header { margin-bottom: 2rem; }
+
+  /* Header — logo menor */
+  .font-\[Anton\] { font-size: 1.4rem !important; }
 }

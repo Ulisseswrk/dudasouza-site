@@ -1,0 +1,20 @@
+.shiny-text {
+  background-image: linear-gradient(
+    var(--shiny-spread, 120deg),
+    var(--shiny-color, #b5b5b5) 0%,
+    var(--shiny-color, #b5b5b5) 35%,
+    var(--shiny-shine, #ffffff) 50%,
+    var(--shiny-color, #b5b5b5) 65%,
+    var(--shiny-color, #b5b5b5) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-sweep var(--shiny-duration, 2s) linear infinite;
+}
+
+@keyframes shiny-sweep {
+  from { background-position: 150% center; }
+  to   { background-position: -50% center; }
+}

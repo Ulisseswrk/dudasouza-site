@@ -1,31 +1,28 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Marquee from './components/Marquee'
 import Credencial from './components/Credencial'
-import Sobre from './components/Sobre'
 import Repertorio from './components/Repertorio'
 import Depoimentos from './components/Depoimentos'
-import Eventos from './components/Eventos'
-import Galeria from './components/Galeria'
+import Servicos from './components/Servicos'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import FadeSection from './components/FadeSection'
 
 export default function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <Marquee />
-        <Credencial />
-        <Sobre />
-        <Repertorio />
-        <Depoimentos />
-        <Eventos />
-        <Galeria />
-        <CTA />
-      </main>
-      <Footer />
+      <div>
+        <Header />
+        <main>
+          <Hero />
+          <FadeSection><Credencial /></FadeSection>
+          <FadeSection><Repertorio /></FadeSection>
+          <FadeSection><Depoimentos /></FadeSection>
+          <FadeSection><Servicos /></FadeSection>
+          <FadeSection><CTA /></FadeSection>
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

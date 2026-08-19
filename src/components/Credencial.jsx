@@ -1,38 +1,221 @@
+import { useReveal } from '../hooks/useReveal'
+
+const WPP = 'https://wa.me/5511999999999'
+
 export default function Credencial() {
+  const bgRef      = useReveal({ threshold: 0.08 })
+  const eyebrowRef = useReveal({ threshold: 0.12 })
+  const titleRef   = useReveal({ threshold: 0.12 })
+  const photosRef  = useReveal({ threshold: 0.1 })
+
   return (
-    <section className="relative section-py-xl overflow-hidden">
-      {/* BG */}
+    <section
+      id="sobre"
+      style={{
+        position: 'relative',
+        background: '#000',
+        overflow: 'hidden',
+        marginBottom: '-1px',
+        paddingInline: 'clamp(1.25rem, 5vw, 3rem)',
+        paddingBlock: 'clamp(5rem, 10vw, 8rem)',
+      }}
+    >
+      {/* Foto de fundo escura — sobe levemente ao entrar */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/img/foto-tocando.jpeg')" }}
+        ref={bgRef}
+        className="reveal-bg-rise"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: "url('/img/pessoas-dancando.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.12,
+          pointerEvents: 'none',
+          willChange: 'transform',
+        }}
       />
-      <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.76)' }} />
 
-      {/* Conteúdo */}
-      <div className="relative z-10 wrap text-center text-white">
-        <span className="eyebrow text-[#C8264A]" style={{ marginBottom: '1.5rem' }}>
-          ✦ Qualidade que emociona ✦
-        </span>
+      {/* Grid principal: texto | fotos */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          width: '100%',
+          maxWidth: '1100px',
+          marginInline: 'auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',
+          gap: 'clamp(2.5rem, 6vw, 5rem)',
+          alignItems: 'center',
+        }}
+      >
+        {/* ── Coluna esquerda: texto ── */}
+        <div>
 
-        <h2
-          className="title-section text-white mx-auto"
-          style={{ maxWidth: '760px', marginBottom: '1.75rem' }}
-        >
-          Versatilidade que encanta,{' '}
-          <span className="text-[#C8264A]">qualidade</span> que emociona
-        </h2>
+          {/* Título */}
+          <div ref={titleRef} className="clip-reveal" style={{ marginBottom: '2rem', paddingTop: '0.15em', marginTop: '-0.15em' }}>
+            <h2
+              className="clip-inner"
+              style={{
+                fontFamily: 'Anton, sans-serif',
+                fontSize: 'clamp(2.2rem, 4.5vw, 3.75rem)',
+                lineHeight: 1.05,
+                fontWeight: 400,
+                textTransform: 'uppercase',
+                letterSpacing: '0.02em',
+                color: '#fff',
+                transitionDelay: '0.18s',
+              }}
+            >
+              Presença de palco?{' '}
+              <span style={{ color: '#C8264A' }}> é aqui mesmo</span>
+            </h2>
+          </div>
 
-        <p
-          className="text-white/55 mx-auto"
+          {/* Parágrafo 1 */}
+          <p
+            style={{
+              fontFamily: 'Epilogue, sans-serif',
+              fontSize: 'clamp(0.88rem, 1.6vw, 0.98rem)',
+              lineHeight: 1.85,
+              color: 'rgba(255,255,255,0.70)',
+              marginBottom: '1.5rem',
+              maxWidth: '500px',
+            }}
+          >
+            Com repertório que vai de{' '}
+            <strong style={{ color: '#fff', fontWeight: 600 }}>
+              Marilia Menconça a Steve Wonder
+            </strong>
+            , passando por MPB e Rock Nacional, Duda leva música de verdade
+            para o seu evento, adaptada perfeitamente ao momento e ao público.
+          </p>
+
+          {/* Parágrafo 2 */}
+          <p
+            style={{
+              fontFamily: 'Epilogue, sans-serif',
+              fontSize: 'clamp(0.88rem, 1.6vw, 0.98rem)',
+              lineHeight: 1.85,
+              color: 'rgba(255,255,255,0.70)',
+              maxWidth: '500px',
+            }}
+          >
+            Não entregamos qualquer show. Entregamos{' '}
+            <strong style={{ color: '#fff', fontWeight: 600 }}>
+              presença de palco
+            </strong>
+            , repertório sob medida e uma energia que transforma qualquer
+            celebração em{' '}
+            <strong style={{ color: '#fff', fontWeight: 600 }}>
+              memória afetiva.
+            </strong>
+          </p>
+        </div>
+
+        {/* ── Coluna direita: fotos deslizam da direita ── */}
+        <div
+          ref={photosRef}
+          className="reveal-from-right"
           style={{
-            maxWidth: '520px',
-            fontSize: 'clamp(0.96rem, 2vw, 1.08rem)',
-            lineHeight: '1.85',
+            position: 'relative',
+            width: '100%',
+            height: 'clamp(260px, 42vw, 420px)',
           }}
         >
-          Cada apresentação é única. Com repertório adaptado ao seu evento e
-          presença de palco que transforma qualquer momento em memória afetiva.
-        </p>
+          {/* Foto esquerda — dançando, inclinada -6deg */}
+          <div
+            style={{
+              position: 'absolute', left: 0, top: '8%',
+              width: '60%', height: '86%',
+              borderRadius: '10px', overflow: 'hidden',
+              transform: 'rotate(-6deg)',
+              boxShadow: '0 28px 72px rgba(0,0,0,0.75)',
+              zIndex: 1,
+              transition: 'transform 0.45s cubic-bezier(0.22,1,0.36,1)',
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'rotate(-3deg) scale(1.03)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'rotate(-6deg)'}
+          >
+            <img
+              src="/img/pessoas-dancando.png"
+              alt="Pessoas dançando"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(120deg, rgba(0,0,0,0.35) 0%, transparent 60%)',
+              pointerEvents: 'none',
+            }} />
+          </div>
+
+          {/* Foto direita — cantando, inclinada +5deg */}
+          <div
+            style={{
+              position: 'absolute', right: 0, top: '4%',
+              width: '58%', height: '88%',
+              borderRadius: '10px', overflow: 'hidden',
+              transform: 'rotate(5deg)',
+              boxShadow: '0 28px 72px rgba(0,0,0,0.75)',
+              zIndex: 2,
+              transition: 'transform 0.45s cubic-bezier(0.22,1,0.36,1)',
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'rotate(2deg) scale(1.03)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'rotate(5deg)'}
+          >
+            <img
+              src="/img/pessoas-cantando.png"
+              alt="Pessoas cantando"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(-120deg, rgba(0,0,0,0.3) 0%, transparent 60%)',
+              pointerEvents: 'none',
+            }} />
+          </div>
+        </div>
+      </div>
+
+      {/* ── CTA centralizado no fundo ── */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          textAlign: 'center',
+          marginTop: 'clamp(3rem, 6vw, 5rem)',
+        }}
+      >
+        <a
+          href={WPP}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-block',
+            fontFamily: 'Oswald, sans-serif',
+            fontSize: '0.78rem',
+            fontWeight: 600,
+            letterSpacing: '0.22em',
+            textTransform: 'uppercase',
+            color: '#fff',
+            border: '1px solid rgba(255,255,255,0.32)',
+            padding: '1.1rem 3rem',
+            borderRadius: '2px',
+            textDecoration: 'none',
+            transition: 'border-color 0.22s ease, background 0.22s ease',
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.borderColor = '#C8264A'
+            e.currentTarget.style.background = 'rgba(200,38,74,0.12)'
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.32)'
+            e.currentTarget.style.background = 'transparent'
+          }}
+        >
+          Faça seu evento ser inesquecível
+        </a>
       </div>
     </section>
   )
