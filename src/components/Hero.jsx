@@ -125,7 +125,7 @@ export default function Hero() {
           }}
         >
           O melhor do eclético: MPB, Rock Nacional, Sertanejo e muito mais... Repertório sob medida para
-          casamentos, formaturas, eventos corporativos e bares.
+          casamentos, formaturas e eventos corporativos.
         </p>
 
         {/* Prova social */}

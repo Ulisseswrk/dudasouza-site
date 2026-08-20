@@ -17,7 +17,7 @@ const formacoes = [
   },
   {
     id: '02',
-    label: 'Show duo',
+    label: 'Dueto',
     sub: 'Nosso formato mais pedido.',
     desc: 'Duda (Voz e Violão) + percussão (meia-lua, cajón ou bateria). Com opção de vocal e/ou instumentos como teclado ou segundo violão. Formação adaptável ao evento.',
     tag: 'A escolha perfeita para casamentos, aniversários e eventos corporativos.',
