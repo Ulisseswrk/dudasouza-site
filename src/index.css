@@ -185,6 +185,19 @@ body {
 
 img, video { max-width: 100%; display: block; }
 
+/* Foto do Duda na seção Credencial: o corte via object-fit sozinho não
+   é suficiente perto de 955–1250px (onde o grid vira 2 colunas e a
+   proporção do quadro quase empata com a da foto, sobrando fundo
+   demais acima da cabeça). Um leve zoom compensa nas larguras
+   menores e um zoom maior cobre essa faixa de transição. */
+.credencial-foto-duda {
+  transform: scale(1.15);
+  transform-origin: 50% 0%;
+}
+@media (min-width: 955px) and (max-width: 1250px) {
+  .credencial-foto-duda { transform: scale(1.6); }
+}
+
 /* ─── Container ──────────────────────────────────────────── */
 .wrap {
   width: 100%;
