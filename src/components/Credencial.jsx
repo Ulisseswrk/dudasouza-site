@@ -136,11 +136,19 @@ export default function Credencial() {
           ref={photosRef}
           className="reveal-from-right"
           style={{
-            position: 'relative',
             width: '100%',
-            height: 'clamp(260px, 42vw, 420px)',
+            containerType: 'inline-size',
           }}
         >
+          {/* Altura ligada à própria largura da coluna (container query), não à
+              viewport — evita o descasamento que espremia as fotos no breakpoint
+              onde o grid passa de 1 para 2 colunas */}
+          <div
+            style={{
+              position: 'relative',
+              height: 'clamp(260px, 42cqw, 420px)',
+            }}
+          >
           {/* Foto esquerda — dançando, inclinada -6deg */}
           <div
             style={{
@@ -184,13 +192,14 @@ export default function Credencial() {
             <img
               src="/img/foto-sobre.jpeg"
               alt="Duda tocando para a plateia"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
             />
             <div style={{
               position: 'absolute', inset: 0,
               background: 'linear-gradient(-120deg, rgba(0,0,0,0.3) 0%, transparent 60%)',
               pointerEvents: 'none',
             }} />
+          </div>
           </div>
         </div>
       </div>
