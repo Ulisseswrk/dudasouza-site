@@ -184,7 +184,7 @@ export default function Credencial() {
             <img
               src="/img/foto-sobre.jpeg"
               alt="Duda tocando para a plateia"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
             />
             <div style={{
               position: 'absolute', inset: 0,
